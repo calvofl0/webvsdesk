@@ -69,6 +69,25 @@ http://localhost:8080/?password=mypass
 
 If you visit without the password or with the wrong password, you'll see "Not authorized".
 
+### Running as a Daemon (Background Process)
+
+To run the web server in the background:
+```bash
+webapp --daemon
+```
+
+With logging to a file:
+```bash
+webapp --daemon --logfile webapp.log
+```
+
+Combined with other options:
+```bash
+webapp --port 3000 --password mypass --daemon --logfile webapp.log
+```
+
+The server will fork to the background and return control to your terminal immediately.
+
 ## Key Differences
 
 - **Desktop App**: Runs locally, creates a window, interacts with the user through GUI
